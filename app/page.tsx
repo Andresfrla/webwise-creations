@@ -1,12 +1,18 @@
+"use client"
+
 import Image from "next/image";
 import Me from "../public/me.jpeg"
 import Message from "@/components/icons/message";
+import { CarouselPlugin } from "./_components/carousel";
+
 
 export default function Home() {
   return (
-    <main className="container-fluid">
+    <main>
       <section className="bg-white">
-        <p>sdjnfkmmsdb</p>
+        <div className="m-auto"> 
+          <CarouselPlugin/>
+        </div>
       </section>
       <section className="flex text-left space-x-10">
         <div className="flex flex-col">

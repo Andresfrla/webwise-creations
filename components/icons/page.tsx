@@ -6,8 +6,8 @@ const Page = () => {
             <Image 
                 src="/icons/page.svg"
                 alt="Logo"
-                height={100}
-                width={100}
+                height={30}
+                width={30}
             />
         </div>
   )
