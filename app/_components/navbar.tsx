@@ -1,6 +1,8 @@
 import Logo from "@/components/logo"
 import { Button } from "@/components/ui/button"
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu"
 import Link from "next/link"
+import { NavigationMenuDemo } from "./navigation-menu"
 
 export const Navbar = () => {
   return (
@@ -8,22 +10,7 @@ export const Navbar = () => {
         <div className="flex justify-around items-center mb-4 mt-4">
             <Logo />
 
-            <div className="flex space-x-2">
-                <Button size="sm" variant="outline" asChild>
-                    <Link
-                        href="/sign-in"
-                    >
-                        Login
-                    </Link>
-                </Button>
-                <Button size="sm" asChild>
-                    <Link
-                        href="/sign-up"
-                    >
-                        Get Taskify for free
-                    </Link>
-                </Button>
-            </div>
+            <NavigationMenuDemo />
         </div>
     </div>
   )
