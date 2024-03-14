@@ -1,16 +1,16 @@
 import Image from "next/image"
 
-const Page = () => {
+const Message = () => {
   return (
         <div className="hover:opacity-75 transition items-center gap-x-2 hidden md:flex">
             <Image 
-                src="/icons/page.svg"
-                alt="Logo"
-                height={100}
-                width={100}
+                src="/icons/message.svg"
+                alt="Mesagge"
+                height={90}
+                width={90}
             />
         </div>
   )
 }
 
-export default Page
+export default Message
