@@ -37,10 +37,8 @@ export function NavigationMenuDemo() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-        <NavigationMenuTrigger>
-          <Button>
+        <NavigationMenuTrigger className="button-style bg-indigo-700 text-white">
             Getting started
-          </Button>
         </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -135,9 +133,9 @@ const ListItem = React.forwardRef<
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <div className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
-          </p>
+          </div>
         </a>
       </NavigationMenuLink>
     </li>

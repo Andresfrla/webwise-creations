@@ -57,4 +57,8 @@
   body {
     @apply bg-background text-foreground;
   }
+  main {
+    background: linear-gradient(135deg, #4C51BF 0%, #6366F1 100%);
+    color: var(--foreground);
+  }
 }
