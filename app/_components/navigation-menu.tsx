@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
 import Computer from "@/components/icons/computer"
+import Page from "@/components/icons/page"
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -71,10 +72,10 @@ export function NavigationMenuDemo() {
                       href="/"
                     >
                       <Computer />
-                      <div className="mb-2 mt-4 text-lg font-medium">
+                      <div className="mb-2 mt-4 text-lg text-indigo-700/80 font-bold">
                         Elevate you online presence with your own domain and customized Page.
                       </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
+                      <p className="text-sm leading-tight text-muted-foreground text-justify">
                         Are you ready to stand out in the digital world? Take your online presence to the next level with your very own domain and a tailor-made web page!
                       </p>
                     </a>
@@ -82,14 +83,26 @@ export function NavigationMenuDemo() {
                   </NavigationMenuLink>
                 
               </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
+              
+              <ListItem className="text-indigo-700/80 font-bold hover:text-indigo-900/30" href="/services/custom-page" title="Get your own domain">
+                <div className="flex flex-col">
+                  <div className="font-semibold text-indigo-900">
+                    The first step to start selling more with the Internet is a domain.
+                  </div>
+                  <div className="flex justify-end font-semibold">
+                  <Page/>
+                  </div>
+                </div>
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
+              <ListItem className="text-indigo-700/80 font-bold" href="/services/consulting" title="Do you need a consulting of you business?">
+                <div className="font-semibold text-indigo-900">
+                  Our team will evaluate your brand to increase your sales.
+                </div>             
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
+              <ListItem className="text-indigo-700/80 font-bold" href="/services/ecommerce" title="Start to sell products on Market place.">
+                <div className="font-semibold text-indigo-900">
+                  You will know how to start selling products on different market place.
+                </div>  
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -97,14 +110,17 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Components</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] ">
               {components.map((component) => (
                 <ListItem
+                  className="text-indigo-700/80 font-bold"
                   key={component.title}
                   title={component.title}
                   href={component.href}
                 >
-                  {component.description}
+                  <div className="font-semibold text-indigo-900">
+                    {component.description}
+                  </div>
                 </ListItem>
               ))}
             </ul>
